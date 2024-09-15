@@ -2,15 +2,33 @@ package com.my_app.user;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "users")
 public class User {
-  private long id;
-  private String name;
-  private LocalDate birthday;
-  public User(long id, String name, LocalDate birthday) {
-    this.id = id;
-    this.name = name;
-    this.birthday = birthday;
-  }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    private String name;
+
+    private LocalDate birthday;
+
+    
+
+    public User() {
+    }
+
+    public User(long id, String name, LocalDate birthday) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+    }
 
     public long getId() {
         return id;
@@ -36,7 +54,4 @@ public class User {
         this.birthday = birthday;
     }
 
-  
-
-  
 }

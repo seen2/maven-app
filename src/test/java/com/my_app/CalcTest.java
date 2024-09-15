@@ -6,7 +6,10 @@
 package com.my_app;
 
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+import com.my_app.learning.Calc;
 
 /**
  *
@@ -20,7 +23,18 @@ public class CalcTest {
     
     @Test
     public void test(){
-        System.out.println("------------------->>>>>>>>>>>>>>>>>>>>>>>>Junit run");
+        Calc calc = new Calc();
+        int actualResult = calc.divide(2, 2);
+        assertEquals(1, actualResult);
+        
+        actualResult= calc.multiply(2, 2);
+        assertEquals(4, actualResult);
+        
+        actualResult= calc.add(2, 2);
+        assertEquals(4, actualResult);
+
+        actualResult= calc.subtract(2, 2);
+        assertEquals(0, actualResult);
 
     }
 
