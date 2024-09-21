@@ -1,4 +1,4 @@
-package com.my_app.user;
+package com.my_app.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

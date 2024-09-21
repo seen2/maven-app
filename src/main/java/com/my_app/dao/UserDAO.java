@@ -1,10 +1,12 @@
-package com.my_app.user;
+package com.my_app.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+
+import com.my_app.dto.User;
 
 public class UserDAO {
 

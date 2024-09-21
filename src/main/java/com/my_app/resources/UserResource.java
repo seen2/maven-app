@@ -1,4 +1,4 @@
-package com.my_app.user;
+package com.my_app.resources;
 
 
 import java.util.List;
@@ -13,6 +13,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import com.my_app.dao.UserDAO;
+import com.my_app.dto.User;
 
 @Path("/users")
 public class UserResource {
