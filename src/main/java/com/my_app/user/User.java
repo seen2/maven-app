@@ -1,42 +1,46 @@
 package com.my_app.user;
 
-import java.time.LocalDate;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "users")
 public class User {
-  private long id;
-  private String name;
-  private LocalDate birthday;
-  public User(long id, String name, LocalDate birthday) {
-    this.id = id;
-    this.name = name;
-    this.birthday = birthday;
-  }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-    public long getId() {
-        return id;
+    private String name;
+    private String email;
+    private String password;
+    public int getId() {
+      return id;
     }
-
-    public void setId(long id) {
-        this.id = id;
+    public void setId(int id) {
+      this.id = id;
     }
-
     public String getName() {
-        return name;
+      return name;
     }
-
     public void setName(String name) {
-        this.name = name;
+      this.name = name;
+    }
+    public String getEmail() {
+      return email;
+    }
+    public void setEmail(String email) {
+      this.email = email;
+    }
+    public String getPassword() {
+      return password;
+    }
+    public void setPassword(String password) {
+      this.password = password;
     }
 
-    public LocalDate getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(LocalDate birthday) {
-        this.birthday = birthday;
-    }
-
-  
-
-  
+    // Getters and setters
+    
 }
